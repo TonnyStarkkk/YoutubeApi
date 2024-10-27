@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/playlistsFragment">
+    <fragment
+        android:id="@+id/playlistsFragment"
+        android:name="com.example.youtubeapi.ui.fragments.playlists.PlaylistsFragment"
+        android:label="fragment_play_lists"
+        tools:layout="@layout/fragment_play_lists" >
+        <action
+            android:id="@+id/action_playlistsFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.example.youtubeapi.ui.fragments.video.VideoFragment"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video" >
+        <action
+            android:id="@+id/action_videoFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="com.example.youtubeapi.ui.fragments.player.PlayerFragment"
+        android:label="fragment_player"
+        tools:layout="@layout/fragment_player" />
+</navigation>
